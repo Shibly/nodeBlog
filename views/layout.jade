@@ -2,6 +2,27 @@ doctype 5
 html
     head
         title= title
+        link(rel='stylesheet', href='/lib/bootstrap/css/bootstrap.min.css')
         link(rel='stylesheet', href='/lib/bootstrap/css/style.css')
     body
-        block content
+        nav.navbar.navbar-inverse
+            div.navbar-header
+                a.navbar-brand(href='#home') Node-Blog
+            div.collapse.navbar-collapse.navbar-ex8-collapse
+                ul.nav.navbar-nav
+                    li.active
+                        a(href='#Home') Home
+                    li
+                        a(href='#about') About
+                    li
+                        a(href='#contact') Contact
+                form.navbar-form.navbar-right(id="formLogin", method="post")
+                    div.form-group
+                        input.form-control.whiteSpace(type="email",id="username", name="User",placeholder="Enter Username")
+                    div.form-group
+                        input.form-control(type="password",id="password", name="Password",placeholder="Enter Password")
+                    button.btn.btn-default(type="submit") Sign In
+
+
+        div.container
+            block content
