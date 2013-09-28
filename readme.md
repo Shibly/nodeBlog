@@ -1,0 +1,1 @@
+nodeBlog is a simple blogging platform build with Express framework.
